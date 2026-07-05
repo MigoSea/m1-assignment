@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Pet Adoption Service</title>
+</head>
+<body>
+    <h1>Contact Pet Adoption Service</h1>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="adopt.html">Adopt a Pet</a> |
+        <a href="contact.html">Contact Form</a>
+    </p>
+    <h2>Adoption Interest Form</h2>
+    <p>
+        Complete the form below if you are interested in adopting a pet or learning
+        more about the local pet adoption service.
+    </p>
+    <form>
+        <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname">
+        </p>
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+            <label for="pettype">Preferred Pet Type:</label><br>
+            <select id="pettype" name="pettype">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="small-animal">Small Animal</option>
+            </select>
+        </p>
+        <p>Adoption Experience:</p>
+        <p>
+            <input type="radio" id="firsttime" name="experience" value="first-time">
+            <label for="firsttime">First-time adopter</label><br>
+            <input type="radio" id="experienced" name="experience" value="experienced">
+            <label for="experienced">Experienced adopter</label>
+        </p>
+        <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit Form">
+        </p>
+    </form>
+</body>
+</html>
