@@ -123,6 +123,33 @@ header {
   }
   /* End Lab Assignment */
 
+  .pet-info {
+    display: none;
+    margin: 0 0 25px 0;
+    padding: 20px;
+    border: 2px solid #818db3;
+    background-color: #f8f4f1;
+    color: #333;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .pet-info h2 {
+    margin: 0 0 10px 0;
+    color: #753a30;
+  }
+
+  .pet-info p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+  }
+
+  .pet-info a {
+    color: #753a30;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   #emailSection,
   #phoneSection {
     display: none;

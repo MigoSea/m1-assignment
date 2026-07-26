@@ -24,6 +24,12 @@
   <h1>Our Pet Gallery</h1>
   <p>Discover the animals that make every day brighter.</p>
 
+  <div id="petInfo" class="pet-info">
+    <h2 id="petName"></h2>
+    <p id="petDetails"></p>
+    <a href="#" id="closePetInfo">Click This To Close</a>
+  </div>
+
   <ul id="gallery"></ul>
 </main>
 
@@ -56,6 +62,14 @@
     "A beautiful fish ready for a new aquarium home"
   ];
 
+  var infoTexts = [
+    "Buddy is a friendly 2-year-old Labrador who enjoys playing with children and needs a caring family.",
+    "Max is a playful puppy who loves walks and would be perfect for an active home.",
+    "Luna is a gentle cat who loves attention and would thrive in a quiet home.",
+    "Milo is a friendly cat who enjoys lounging and would be a wonderful companion for a patient family.",
+    "Nemo is a bright and colorful fish who would be happy in a well-maintained aquarium home."
+  ];
+
   var openCaptionTag = "<div class='caption'>";
   var closeCaptionTag = "</div>";
   var openDescTag = "<div class='description'>";
@@ -65,7 +79,7 @@
   var html = "";
 
   for (var i = 0; i < imageFiles.length; i++) {
-    html += "<li id='photo" + (i + 1) + "'>";
+    html += "<li id='photo" + (i + 1) + "' data-index='" + i + "'>";
     html += "<img src='images/" + imageFiles[i] + "'>";
     html += openCaptionTag + captionTexts[i] + closeCaptionTag;
     html += openDescTag + descTexts[i] + closeDescTag;
@@ -73,6 +87,27 @@
   }
 
   gallery.innerHTML = html;
+
+  var petInfoBox = document.getElementById("petInfo");
+  var petName = document.getElementById("petName");
+  var petDetails = document.getElementById("petDetails");
+  var closePetInfo = document.getElementById("closePetInfo");
+  var petItems = document.querySelectorAll("#gallery li");
+
+  for (var j = 0; j < petItems.length; j++) {
+    petItems[j].addEventListener("click", function () {
+      var index = parseInt(this.getAttribute("data-index"), 10);
+      var name = captionTexts[index].split(" - ")[0];
+      petName.textContent = name;
+      petDetails.textContent = infoTexts[index];
+      petInfoBox.style.display = "block";
+    });
+  }
+
+  closePetInfo.addEventListener("click", function (event) {
+    event.preventDefault();
+    petInfoBox.style.display = "none";
+  });
 </script>
 
 </body>
