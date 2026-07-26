@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care Contact</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<div id="container">
+
+<header>Paws &amp; Whiskers Pet Care</header>
+<nav>
+  <ul>
+    <li><a href="js-demo2.html">Home</a></li>
+    <li><a href="js-demo2b.html">About</a></li>
+    <li><a href="js-demo2d.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Meet Your Future Best Friend</h1>
+  <p>Tell us about the kind of companion you’re hoping to welcome home and we’ll help guide your adoption journey.</p>
+
+  <form action="/signup" method="post">
+    <fieldset>
+      <legend>Adoption interest form</legend>
+      <label>Enter your full name</label>
+      <input type="text" name="name">
+      <label>Enter your email</label>
+      <input type="email" name="email">
+      <label>Enter your phone</label>
+      <input type="text" name="phone">
+      <label>Select your preferred pet type</label>
+      <input type="radio" name="pet" value="dog"/>Dog
+      <input type="radio" name="pet" value="cat"/>Cat
+      <input type="radio" name="pet" value="fish"/>Fish
+      <label>How should we contact you?</label>
+      <select id="contactMethod">
+        <option value="">Select One</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+      </select>
+      <div id="emailSection">
+        <label>Enter your email:</label>
+        <input type="email" id="emailInput" name="emailContact">
+      </div>
+      <div id="phoneSection">
+        <label>Enter your phone:</label>
+        <input type="tel" id="phoneInput" name="phoneContact">
+      </div>
+      <label>Tell us about the pet you would love to adopt:</label>
+      <textarea rows="5" cols="30"></textarea>
+      <input type="submit" value="apply">
+    </fieldset>
+  </form>
+</main>
+
+<footer>&copy; Copyright 2020</footer>
+
+</div>
+
+<script src="js/contact.js"></script>
+</body>
+</html>

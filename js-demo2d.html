@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>Pet Gallery</title>
+
+<link rel="stylesheet" href="demo.css">
+
+</head> 	
+<body>
+
+<div id="container">
+
+<header>Paws &amp; Whiskers Pet Care</header>
+<nav>
+	<ul>
+    <li><a href="js-demo2.html">Home</a></li>
+    <li><a href="js-demo2b.html">About</a></li>
+    <li><a href="js-demo2d.html">Gallery</a></li>
+    <li><a href="js-demo2c.html">Contact</a></li>
+	</ul>
+</nav>
+
+<main>
+  <h1>Our Pet Gallery</h1>
+  <p>Discover the animals that make every day brighter.</p>
+
+  <ul id="gallery"></ul>
+</main>
+
+<footer>&copy; Copyright 2020</footer>
+
+</div>
+
+<script>
+  var imageFiles = [
+    "pet1.jpg",
+    "pet2.jpg",
+    "pet3.jpg",
+    "pet4.jpg",
+    "pet5.jpg"
+  ];
+
+  var captionTexts = [
+    "Buddy - Friendly Dog Looking for a Forever Home",
+    "Max - Playful Dog Ready for Adoption",
+    "Luna - Loving Cat Searching for a Family",
+    "Milo - Friendly Cat Waiting for Adoption",
+    "Nemo - Beautiful Fish Ready for a New Aquarium Home"
+  ];
+
+  var descTexts = [
+    "A friendly dog available for adoption and ready for a loving home",
+    "A playful dog eager to meet a new family",
+    "A loving cat searching for a warm forever home",
+    "A friendly cat waiting to be adopted into a caring family",
+    "A beautiful fish ready for a new aquarium home"
+  ];
+
+  var openCaptionTag = "<div class='caption'>";
+  var closeCaptionTag = "</div>";
+  var openDescTag = "<div class='description'>";
+  var closeDescTag = "</div>";
+
+  var gallery = document.getElementById("gallery");
+  var html = "";
+
+  for (var i = 0; i < imageFiles.length; i++) {
+    html += "<li id='photo" + (i + 1) + "'>";
+    html += "<img src='images/" + imageFiles[i] + "'>";
+    html += openCaptionTag + captionTexts[i] + closeCaptionTag;
+    html += openDescTag + descTexts[i] + closeDescTag;
+    html += "</li>";
+  }
+
+  gallery.innerHTML = html;
+</script>
+
+</body>
+</html>
